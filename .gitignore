@@ -5,7 +5,7 @@
 *.pdf
 *.psd
 tech/
-css/*.css
+
 node_modules/
 Thumbs.db
 build/
