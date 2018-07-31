@@ -7,7 +7,7 @@ var changeVisability = function() {
   if (blockToHide.hasAttribute('hidden')) {
     blockToHide.removeAttribute('hidden');
 } else {
-    blockToHide.setAttribute('hidden', 'hidden');
+    blockToHide.setAttribute('hidden', '');
 
 }};
 

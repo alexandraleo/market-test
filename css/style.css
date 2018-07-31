@@ -8,11 +8,13 @@
 .page-footer,
 .page-main {
   padding: 20px;
+  background-color: #fff;
 }
-.page-main {
-  border-top: 1px solid #696969;
+
+.page-header {
   border-bottom: 1px solid #696969;
 }
+
 .page-header__nav section,
 .page-footer section,
 .clickable-blocks section,
@@ -22,17 +24,27 @@
   background-color: #777;
   padding: 20px;
 }
+
 .page-header__contact {
   text-align: right;
   margin: 0;
   padding-top: 5px;
   padding-bottom: 5px;
 }
+
 .page-header__contact-link {
   color: inherit;
   padding: 5px;
   text-decoration: underline;
 }
+
+.page-header__contact-link:focus,
+.page-header__contact-link:hover  {
+  color: #F6FF4A;
+  text-shadow: 5px 5px 10px #fff;
+  transition: text-shadow 0.5s linear;
+}
+
 .page-header__contact-phone {
   text-decoration: none;
 }
@@ -64,6 +76,11 @@
   padding-left: 0;
 }
 
+.navbar-toggler {
+  font-size: 1rem;
+  width: 100%;
+}
+
 .content {
   padding: 0 0 0 20px;
 }
@@ -73,6 +90,7 @@
 }
 
 .content__main-block {
+  padding: 20px;
   margin-bottom: 20px;
 }
 
@@ -80,28 +98,35 @@
   font-weight: bold;
 }
 
+.content__disclaimer-block {
+  font-weight: bold;
+  text-transform: uppercase;
+}
+
 .col-xs-5th, .col-sm-5th, .col-md-5th, .col-lg-5th, .col-xl-5th {
   position: relative;
   width: 100%;
   min-height: 150px;
-  border: 10px solid #fff;
+  border-left: 10px solid #fff;
+  border-right: 10px solid #fff;
+  margin-bottom: 20px;
 }
 
 @media (min-width: 576px) {
   .col-sm-5th {
     -webkit-box-flex: 0;
-    -ms-flex: 0 0 20%;
-    flex: 0 0 20%;
-    max-width: 20%;
+    -ms-flex: 0 0 50%;
+    flex: 0 0 50%;
+    max-width: 50%;
   }
 }
 
 @media (min-width: 768px) {
   .col-md-5th {
     -webkit-box-flex: 0;
-    -ms-flex: 0 0 20%;
-    flex: 0 0 20%;
-    max-width: 20%;
+    -ms-flex: 0 0 33%;
+    flex: 0 0 33%;
+    max-width: 33%;
   }
 }
 
@@ -124,19 +149,47 @@
 }
 
 .content__card {
+  opacity: 1;
   padding: 10px;
 }
 
-.content__card:first-child,
-.content__card:nth-child(6n) {
-  border-left: 0;
+.content__card:first-child:focus,
+.content__card:first-child:hover {
+  animation: move 0.5s linear;
 }
 
-.content__card:nth-child(5n) {
-  border-right: 0;
+.content__card:nth-child(2):focus,
+.content__card:nth-child(2):hover {
+  animation: bgcolor 1s ease-in forwards;
 }
 
-.content__text-blocks
+.content__card:nth-child(3):focus,
+.content__card:nth-child(3):hover {
+  box-shadow: 0px 0px 20px 15px #ccc;
+  transition: box-shadow 1s linear;
+}
+
+.content__card:nth-child(4):focus,
+.content__card:nth-child(4):hover {
+  animation: skew 2s linear forwards;
+}
+
+.content__card:nth-child(5):focus,
+.content__card:nth-child(5):hover {
+  opacity: 0.3;
+  border: 10px solid rgb(58, 58, 58);
+  transition: opacity 1s linear;
+}
+
+.content__card:nth-child(6):focus,
+.content__card:nth-child(6):hover {
+  animation: borderrad 2s linear forwards;
+}
+
+.content__card:nth-child(7):focus,
+.content__card:nth-child(7):hover {
+  animation: increase 1.5s linear forwards;
+}
 
 .content__text-block,
 .content__disclaimer-block {
@@ -144,18 +197,24 @@
   border-top: 20px solid #fff;
   padding: 20px;
 }
+
 .content__text-block {
   border-right: 10px solid #fff;
 }
+
 .content__disclaimer-block {
   border-left: 10px solid #fff;
 }
 
+.page-footer {
+  border-top: 1px solid #696969;
+}
+
 .page-footer__points,
-.page-footer__links,
-.page-footer__clickable-blocks {
+.page-footer__links {
   border-right: 15px solid #fff;
 }
+
 .page-footer__links,
 .page-footer__clickable-blocks {
   border-left: 15px solid #fff;
@@ -175,6 +234,12 @@
   color: inherit;
 }
 
+.page-footer__list-link:focus,
+.page-footer__list-link:hover  {
+  color: #F6FF4A;
+  text-shadow: 5px 5px 10px #fff;
+  transition: text-shadow 0.5s linear;
+}
 .clickable-blocks {
   padding: 0;
 }
@@ -184,9 +249,48 @@
   width: 100%;
   min-height: 75px;
 }
-.clickable-blocks__upper {
-  margin-bottom: 10px;
-}
+
 .clickable-blocks__lower {
-  margin-top: 10px;
+  margin-top: 20px;
+}
+
+@keyframes move {
+  0%, 50%, 100% { transform: translateX(0);
+  }
+  25% { transform: translateX(5px);
+  }
+  75%  { transform: translateX(-5px);
+  }
+}
+
+@keyframes bgcolor {
+  0%, { background-color: inherit;
+  }
+  50% { background-color: green;
+  }
+  100% { background-color: yellow;
+  }
+}
+
+@keyframes skew {
+  0%, 50%, 100% { transform: skewX(0);
+  }
+  25% { transform: skewX(7deg);
+  }
+  75%  { transform: skewX(-7deg);
+  }
+}
+
+@keyframes borderrad {
+  0%, 100% { border-radius: 0%;
+  }
+  50% { border-radius: 50%;
+  }
+}
+
+@keyframes increase {
+  0%, 100% { transform: scale(1); background-color: #inherit;
+  }
+  50% {transform: scale(1.25); background-color: #777;
+  }
 }

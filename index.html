@@ -10,39 +10,45 @@
     <title>Маркетплейс</title>
 </head>
 <body class="page container-fluid">
-    <header class="page-header">
-      <nav class="page-header__nav row justify-content-between sticky-top">
-        <section class="col page-header__logo"></section>
-        <section class="col-4 page-header__slogan mr-3 ml-3"></section>
-        <section class="col-6 page-header__contacts">
+    <header class="page-header sticky-top">
+      <nav class="page-header__nav row justify-content-between">
+        <section class="col-md page-header__logo"></section>
+        <section class="col-md-4 page-header__slogan d-none d-md-block mr-md-3 ml-md-3"></section>
+        <section class="col-md-6 page-header__contacts">
           <p class="page-header__contact"><a href="tel:+79817246875" class="page-header__contact-link page-header__contact-phone">+7 (981) 724-68-75</p></a>
           <p class="page-header__contact"><a href="mailto:alexandervaa@gmail.com" class="page-header__contact-link">alexandervaa@gmail.com</a></p>
           <p class="page-header__contact"><a href="anysite.ru" class="page-header__contact-link">ссылканалюбойсайт.ру</a></p>
         </secton>
       </nav>
     </header>
-    <main class="page-main row">
-      <aside class="page-main__aside d-flex align-items-start flex-column col-md-2">
-        <menu class="page-main__catalog catalog">
-          <p class="catalog__catalog-name">Маркетплейс</p>
-          <ul class="catalog__list">
-            <li class="catalog__item">Кухни</li>
-            <li class="catalog__item">Диваны</li>
-            <li class="catalog__item">Кровати</li>
-            <li class="catalog__item">Шкафы</li>
-            <li class="catalog__item">Мягкая мебель</li>
-            <li class="catalog__item">Матрасы</li>
-            <li class="catalog__item">Стулья</li>
-            <li class="catalog__item">Столы</li>
-            <li class="catalog__item">Освещение</li>
-            <li class="catalog__item">Двери и окна</li>
-            <li class="catalog__item">Аксессуары</li>
-            <li class="catalog__item">Для бизнеса</li>
-          </ul>
+    <main class="page-main row flex-xs-column flex-md-row">
+      <aside class="page-main__aside d-flex align-items-start flex-column col col-md-2">
+        <menu class="page-main__catalog catalog navbar navbar-expand-md">
+          <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+            aria-expanded="false" aria-label="Toggle navigation">
+            Каталог
+          </button>
+          <div class="collapse navbar-collapse flex-column" id="navbarSupportedContent">
+            <p class="catalog__catalog-name">Маркетплейс</p>
+            <ul class="catalog__list flex-column navbar-nav mr-auto">
+              <li class="catalog__item">Кухни</li>
+              <li class="catalog__item">Диваны</li>
+              <li class="catalog__item">Кровати</li>
+              <li class="catalog__item">Шкафы</li>
+              <li class="catalog__item">Мягкая мебель</li>
+              <li class="catalog__item">Матрасы</li>
+              <li class="catalog__item">Стулья</li>
+              <li class="catalog__item">Столы</li>
+              <li class="catalog__item">Освещение</li>
+              <li class="catalog__item">Двери и окна</li>
+              <li class="catalog__item">Аксессуары</li>
+              <li class="catalog__item">Для бизнеса</li>
+            </ul>
+          </div>
         </menu>
-        <section class="page-main__aside-block"></section>
+        <section class="page-main__aside-block d-none d-md-block"></section>
       </aside>
-      <section class="content page-main__content col-10">
+      <section class="content page-main__content col col-md-10">
         <section class="content__main-block">
           <p class="content__text--important">PSD файл с макетом. Макет разбит по слоям и сгрупированн по папкам:</p>
             <ul class="content__list">
@@ -70,8 +76,8 @@
         </div>
       </section>
     </main>
-    <footer class="page-footer row">
-      <section class="page-footer__points col-4">
+    <footer class="page-footer row flex-xs-column flex-md-row">
+      <section class="page-footer__points col-6 col-md-4">
         <ul class="page-footer__points-list">
           <li class="page-footer__points-item">Пункт 01</li>
           <li class="page-footer__points-item">Пункт 02</li>
@@ -89,7 +95,7 @@
           <li class="page-footer__points-item">Пункт 14</li>
         </ul>
       </section>
-      <section class="page-footer__links col-4">
+      <section class="page-footer__links col-6 col-md-4 ">
         <ul class="page-footer__links-list">
           <li class="page-footer__list-item"><a href="" class="page-footer__list-link">Статистика посещений</a></li>
           <li class="page-footer__list-item"><a href="" class="page-footer__list-link">Контакты</a></li>
@@ -100,7 +106,7 @@
           <li class="page-footer__list-item"><a href="" class="page-footer__list-link">Помощь</a></li>
         </ul>
       </section>
-      <div class="clickable-blocks page-footer__clickable-blocks col-4 d-flex flex-wrap">
+      <div class="clickable-blocks page-footer__clickable-blocks col-6 col-md-4 d-flex flex-wrap">
         <section class="clickable-blocks__upper"></section>
         <section class="clickable-blocks__lower"></section>
       </div>
